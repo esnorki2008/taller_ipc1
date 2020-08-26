@@ -34,14 +34,14 @@ public class Dia2 {
         /*======================LENGTH===============*/
         //System.out.println(Arreglo1[2].length);
         /*======================FOR EACH===============*/
-        for(int uno[] : arr1 ){
+        /*for(int uno[] : arr1 ){
             for(int dos: uno){
                 System.out.println(dos);
             }
-        }
+        }*/
         
-       for(int uno =0;uno<2;uno++){
-            for(int dos =0;dos<2;dos++){
+        for(int uno =0;uno<2;uno++){
+            for(int dos =0;dos<3;dos++){
                 System.out.println(arr1[uno][dos]);
             }
         }
