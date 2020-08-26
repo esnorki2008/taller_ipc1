@@ -65,11 +65,10 @@ public class Dia1 {
         
         }
         
-        //CICLOS
-        //FOR
+        //DECLARACION DE UNA MAATRIZ
         String[][] mat = new String[10][10];
         
-        int contador = 0;
+        //RECORRIDO
         for(int i=0;i<4;i++){//10
             //i==1
             for(int j=0;j<4;j++){//10
