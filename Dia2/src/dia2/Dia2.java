@@ -5,13 +5,9 @@
  */
 package dia2;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Set;
+
+
 
 /**
  *
@@ -42,7 +38,7 @@ public class Dia2 {
         
         for(int uno =0;uno<2;uno++){
             for(int dos =0;dos<3;dos++){
-                System.out.println(arr1[uno][dos]);
+                //System.out.println(arr1[uno][dos]);
             }
         }
         
@@ -50,18 +46,28 @@ public class Dia2 {
         /*========================METODOS Y FUNCIONES=========*/
         
         
-     
-    
-
-        devolver_valor();
+        //OBJETOS
+        Vehiculo Numero1 = new Vehiculo("123",2000,"azul","Toyota");
+        Vehiculo Numero2 = new Vehiculo("456",2010,"rojo","Toyota");
+        Vehiculo Numero3 = new Vehiculo("456",2015,"rojo","Toyota");
         
-        
+        Numero1.Ecender();
+        Numero2.Ecender();
+        Numero3.Ecender();
+        //GET y SET
+        Numero3.setPlaca("789");
+        Numero3.Ecender();
+        System.out.println(Numero3.getAnio());
     }
     
     static int  devolver_valor(){
         return 5;
     }
     
+    static void metodo(){
+    
+        return;
+    }
     
 }
 
