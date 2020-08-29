@@ -83,7 +83,7 @@ public class Taller5 {
         Scroll.setVisible(true);
         Panel.add(Scroll);
         Panel.repaint();
-        Principal.repaint();
+        Principal.setVisible(true);
     }
     
 }
