@@ -27,7 +27,7 @@ public class Dia6 {
         
         //System.out.println(LibroCreado.getGeneroLibro().getNombre());
     
-        /*
+        
         //LEER PRUEBA
         CargaMasiva Carga = new CargaMasiva();
         //Usuarios
@@ -39,7 +39,7 @@ public class Dia6 {
         //Libros
         Carga.CargarLibros();
         Carga.ImprimirLibros();
-        */
+        
         
         
     }

@@ -76,6 +76,7 @@ public class CargaMasiva {
                 String Nombre = Campos[2];
                 //Yo se que el arreglo tiene 100 posiciones pero voy a poner 80
                 if (GeneroBuscado == null) {
+                    
                     System.out.println("No Se Encontro El Genero");
                 } else {
                     for (int i = 0; i < 80; i++) {
@@ -108,8 +109,9 @@ public class CargaMasiva {
     
     public void ImprimirGeneros(){
         for(int i=0;i<80;i++){
-            if(Dia6.UsuarioArreglo[i]!=null)
+            if(Dia6.GeneroArreglo[i]!=null)
             System.out.println(Dia6.GeneroArreglo[i].getNombre());
+            
         }
     }
     public void ImprimirUsuarios(){
@@ -120,7 +122,7 @@ public class CargaMasiva {
     }
     public void ImprimirLibros(){
         for(int i=0;i<80;i++){
-            if(Dia6.UsuarioArreglo[i]!=null)
+            if(Dia6.LibroArreglo[i]!=null)
             System.out.println(Dia6.LibroArreglo[i].getNombre());
         }
     }
