@@ -5,6 +5,8 @@
  */
 package dia6;
 
+import GUI.FrameLogin;
+
 /**
  *
  * @author Esnorki
@@ -27,7 +29,7 @@ public class Dia6 {
         
         //System.out.println(LibroCreado.getGeneroLibro().getNombre());
     
-        
+        /*
         //LEER PRUEBA
         CargaMasiva Carga = new CargaMasiva();
         //Usuarios
@@ -40,8 +42,23 @@ public class Dia6 {
         Carga.CargarLibros();
         Carga.ImprimirLibros();
         
+        */
         
         
+        Graficador prueba = new Graficador("Libros","Categoria","Cantidad");
+        Genero NuevoGenero = new Genero(1,"Genero 1");
+        Libro Libro1 = new Libro(10,NuevoGenero,"Libto Azul");
+        Libro Libro2 = new Libro(20,NuevoGenero,"Libto Verde");
+        Libro1.setCantidad(400);
+        prueba.CargarLibro(Libro1);
+        prueba.CargarLibro(Libro2);
+        prueba.CargarGrafica();
+        
+        
+        //FrameLogin Login = new FrameLogin();
+        //FrameOperador Operador = new FrameOperador();
+    
+    
     }
     
 }

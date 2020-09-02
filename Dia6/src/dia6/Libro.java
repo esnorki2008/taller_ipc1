@@ -13,11 +13,22 @@ public class Libro {
     private int Codigo;
     private String Nombre;
     private Genero GeneroLibro;
+    private int Cantidad;
 
+    public int getCantidad() {
+        return Cantidad;
+    }
+
+    public void setCantidad(int Cantidad) {
+        this.Cantidad = Cantidad;
+    }
+    
+    
     public Libro(int Codigo,Genero GeneroLibro, String Nombre ) {
         this.Codigo = Codigo;
         this.Nombre = Nombre;
         this.GeneroLibro = GeneroLibro;
+        this.Cantidad = 1;
     }
 
     public int getCodigo() {
