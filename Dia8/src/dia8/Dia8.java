@@ -20,10 +20,19 @@ public class Dia8 {
         Cajero Caja2 = new Cajero(31);
         Caja1.start();
         Caja2.start();
-        */
+         */
+
+        //Frame Juego = new Frame();
+        //Juego.Jugar();
         
-        Frame Juego = new Frame();
-        Juego.Jugar();
+        
+        Entidad Prueba = new Enemigo(20, 20, 20, 20);
+        System.out.println(Prueba.getX());
+        Prueba.setX(74);
+        System.out.println(Prueba.getX());
+        
+        
+
     }
-    
+
 }

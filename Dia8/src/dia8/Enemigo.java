@@ -15,12 +15,23 @@ import javax.swing.JLabel;
  * @author Esnorki
  */
 public class Enemigo extends Entidad{
-
+    private int Vida;
     public Enemigo(int X, int Y, int SizeX, int SizeY) {
         super(X, Y, SizeX, SizeY);
         this.Sprite.setText("");
         ImageIcon Imagen = new ImageIcon("C:\\Users\\Esnorki\\Desktop\\taller_ipc1\\Imagenes\\Enem.png");
         this.Sprite.setIcon(Imagen);
+        this.Vida = 3;
+    }
+    public void RecibirGolpe(){
+        this.Vida--;
+    }
+    public int getVida() {
+        return Vida;
+    }
+
+    public void setVida(int Vida) {
+        this.Vida = Vida;
     }
 
     public JLabel getSprite() {

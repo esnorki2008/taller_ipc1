@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 public class Municion extends Entidad{
 
     public Municion(int X, int Y, int SizeX, int SizeY) {
-        super(X, Y-30, SizeX, SizeY);
+        super(X, Y-0, SizeX, SizeY);
         this.Sprite.setText("");
         ImageIcon Imagen = new ImageIcon("C:\\Users\\Esnorki\\Desktop\\taller_ipc1\\Imagenes\\bala.png");
         this.Sprite.setIcon(Imagen);
@@ -26,7 +26,7 @@ public class Municion extends Entidad{
     public void run() {
         while(Activo && this.X >20){
             try {
-                Thread.sleep(400);
+                Thread.sleep(200);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Enemigo.class.getName()).log(Level.SEVERE, null, ex);
             }

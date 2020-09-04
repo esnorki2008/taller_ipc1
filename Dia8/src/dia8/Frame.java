@@ -64,7 +64,7 @@ public class Frame extends JFrame{
         
         });
         this.setFocusable(true);
-        this.J1 = new Jugador(700,250,100,10);
+        this.J1 = new Jugador(700,250,100,100);
         this.panel.add(J1.getSprite());
     }
     
@@ -94,6 +94,7 @@ public class Frame extends JFrame{
                 Municion M1 = new Municion(this.J1.getX(),this.J1.getY(),100,100);
                 panel.add(M1.getSprite());
                 M1.start();
+                this.MunicionArreglo[i]=M1;
                 return;
             }
         }
@@ -108,17 +109,21 @@ public class Frame extends JFrame{
             Enemigo EnemigoActual = this.EnemigoArreglo[i];
             if(EnemigoActual!=null){
                 for (int j = 0; j < 50; j++) {
-                    Municion MunicionActual = this.MunicionArreglo[i];
+                    Municion MunicionActual = this.MunicionArreglo[j];
                     if (MunicionActual != null) {
-                        if (abs(MunicionActual.getY() - EnemigoActual.getY()) <= 200 ) {
-                            if (abs(MunicionActual.getX() - EnemigoActual.getX()) <= 200) {
-                                this.panel.remove(this.MunicionArreglo[i].getSprite());
-                                this.MunicionArreglo[i]=null;
-                                this.MunicionArreglo[i].setActivo(false);
+                        if (abs(MunicionActual.getY() - EnemigoActual.getY()) <= 50 ) {
+                            if (abs(MunicionActual.getX() - EnemigoActual.getX()) <= 50) {
+                                this.panel.remove(this.MunicionArreglo[j].getSprite());
+                                this.MunicionArreglo[j].setActivo(false);
+                                this.MunicionArreglo[j]=null;
                                 
-                                this.panel.remove(this.EnemigoArreglo[i].getSprite());
-                                this.EnemigoArreglo[i]=null;
-                                this.EnemigoArreglo[i].setActivo(false);
+                                this.EnemigoArreglo[i].RecibirGolpe();
+                                if(this.EnemigoArreglo[i].getVida()<=0){
+                                    this.panel.remove(this.EnemigoArreglo[i].getSprite());
+                                    this.EnemigoArreglo[i].setActivo(false);
+                                    this.EnemigoArreglo[i]=null;
+                                }
+                                break;
                             }
                         }
                     }
@@ -132,9 +137,10 @@ public class Frame extends JFrame{
             Enemigo Actual = this.EnemigoArreglo[i];
             if(Actual==null){
                 int Posy = i%2;
-                Enemigo Ene1 = new Enemigo(10,100+(i*300),100,100);
+                Enemigo Ene1 = new Enemigo(10,100+(Posy*100),100,100);
                 panel.add(Ene1.getSprite());
-                Ene1.start();
+                Ene1.start();                
+                this.EnemigoArreglo[i]=Ene1;
                 return;
             }
         }
